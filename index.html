@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Kay+Pho+Du:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="icon.png" />
+        <title>Bookmark</title>
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="main">
+                <h1 class="text-center mt-5">Bookmarker</h1>
+            </div>
+            <div class="contain">
+            <div class="contect d-flex flex-column  justify-content-center align-items-center mt-5 position-relative">
+                <h2 class="text-center">
+                    <i class="fa-solid fa-bookmark"></i>
+                    
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                
+                </h2>
+                <div class="mb-3  w-100">
+                    <label for="sitename" class="form-label fw-bold"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+                    <input oninput="validationinfo(this)" type="text" class="form-control" id="sitename" placeholder="Bookmark Name" />
+                </div>
+                <div class="mb-3 w-100">
+                    <label for="siteurl" class="form-label fw-bold"><i class="fa-solid fa-link"></i> Site URL</label>
+                    <input oninput="validationinfo(this)" type="url" class="form-control" id="siteurl" placeholder="Website URL" />
+                </div>
+                <button onclick="addinfo()" type="button" class="btn px-5 btn-submit ">Submit</button>
+               
+            </div>
+            </div>
+            <!-- https://google.com -->
+        <div id="tabledata">
+            <table class="table bg-white text-center mt-4 fw-bold">
+                <thead>
+                <tr>
+                    <td>Index</td>
+                    <td>Website Name</td>
+                    <td>Visit</td>
+                    <td>Delete</td>
+                </tr>
+
+                </thead>
+                <tbody id="contenttable"></tbody>
+              </table>
+        </div>
+        
+<div class="backlight d-none ">
+        <div class="instraction shadoe-lg ">
+            <i  class="fa-solid fa-xmark close" id="close"></i>
+            <div class="circle">
+            <i class="fa-solid fa-circle" style="color: #dd1d26;"></i>
+            <i class="fa-solid fa-circle" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-circle" style="color: #2a932b;"></i>
+            </div>
+<div class="parg">
+            <p class="pag1">Site Name or Url is not valid, Please follow the rules below :</p>
+            <p class="pag2"><i class="fa-regular fa-circle-right" style="color: #e61e1e;"></i>  Site name must contain at least 3 characters</p>
+            <p class="pag3"> <i class="fa-regular fa-circle-right" style="color: #e61e1e;"></i>  Site URL must be a valid one</p>
+</div>
+
+        </div>
+        </div>
+        </div>
+        
+
+        <script src="index.js"></script>
+    </body>
+</html>
